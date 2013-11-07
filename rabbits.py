@@ -3,8 +3,8 @@
 # A variation on the Fibonacci's number calculation
 
 def rabbits(n):
-    list = [0, 0, 0, 0, 1]  
+    history = [0, 0, 0, 0, 1]  
     for i in range(n-1):
-        list.append(list[3] + list[4] - list.pop(0))
+        history.append(history[3] + history[4] - history.pop(0))
 
-    return list[4]
+    return history[4]
